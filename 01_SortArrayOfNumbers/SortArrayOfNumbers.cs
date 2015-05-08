@@ -10,8 +10,7 @@ class SortArrayOfNumbers
 {
     static void Main()
     {
-        string[] arr = Console.ReadLine().Split().OrderBy(a => int.Parse(a)).ToArray();
-        int[] numArr = Array.ConvertAll(arr, s => int.Parse(s));
+        int[] numArr = Console.ReadLine().Trim().Split().Select(p => int.Parse(p)).OrderBy(p => p).ToArray();
         Console.WriteLine(string.Join(" ", numArr));
     }
 }
